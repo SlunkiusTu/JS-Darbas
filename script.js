@@ -10,17 +10,16 @@ const getProducts = async () => {
   data.forEach((product) => {
     const container = document.createElement("a");
     container.setAttribute("class", "products-container");
-    container.href = "#";
-
-    const title = document.createElement("h1");
-    title.innerHTML = product.title;
-    container.appendChild(title);
+    container.href = "./productPage.html";
 
     const image = document.createElement("img");
     image.setAttribute("class", "product-image");
     image.src = product.img_url;
-
     container.appendChild(image);
+
+    const title = document.createElement("h1");
+    title.innerHTML = product.title;
+    container.appendChild(title);
 
     const price = document.createElement("p");
     price.innerHTML = product.price;

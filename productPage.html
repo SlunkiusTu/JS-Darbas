@@ -7,18 +7,30 @@
     <title>JS Darbas</title>
   </head>
   <body>
-
-   <div class="logo">Šhopas</div>
+    <div>
+      <header>
+        <div class="logo">Šhopas</div>
 
         <nav>
           <ul>
-            <li><a href="#">Produktai</a></li>
+            <li><a href="./index.html">Produktai</a></li>
             <li><a href="./addProduct.html">Ideti produkta</a></li>
           </ul>
         </nav>
       </header>
+      <div class="product-container">
+        <div class="imageContainer">
+          <img id="productPageImage" class="productPageImage" />
+        </div>
+        <div class="productInfo">
+          <h1 class="title" id="title"></h1>
+          <p class="price" id="price"></p>
+          <p class="location" id="location"></p>
+          <h3 class="description" id="description"></h3>
+          <button class="deleteButton" id="deleteButton">Delete</button>
+        </div>
+      </div>
     </div>
-
 
     <script src="./productPage.js"></script>
   </body>
