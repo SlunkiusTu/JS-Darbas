@@ -14,17 +14,17 @@ const getProducts = async () => {
 
     const title = document.createElement("h1");
     title.innerHTML = product.title;
-    container.append(title);
+    container.appendChild(title);
 
     const image = document.createElement("img");
     image.setAttribute("class", "product-image");
     image.src = product.img_url;
 
-    image.append(img_url);
+    container.appendChild(image);
 
     const price = document.createElement("p");
     price.innerHTML = product.price;
-    image.append(price);
+    container.appendChild(price);
 
     productWrapper.append(container);
   });
