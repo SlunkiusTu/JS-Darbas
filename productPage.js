@@ -13,7 +13,6 @@ const productsAddedToPage = (product) => {
 
   const description = document.getElementById("description");
   description.innerHTML = product.description;
-
   const productPageImage = document.getElementById("productPageImage");
   productPageImage.src = product.img_url;
 };
@@ -25,8 +24,6 @@ const getProduct = async () => {
     "https://64ed83091f87218271415468.mockapi.io/product/" + productId
   );
   const product = await response.json();
-  console.log(product);
-  console.log(response);
 
   productsAddedToPage(product);
 };
