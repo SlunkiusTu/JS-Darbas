@@ -6,7 +6,7 @@ const productsAddedToPage = (product) => {
   title.innerHTML = product.title;
 
   const price = document.getElementById("price");
-  price.innerHTML = product.price;
+  price.innerHTML = `€${product.price}`;
 
   const location = document.getElementById("location");
   location.innerHTML = product.location;
@@ -50,7 +50,7 @@ deleteButton.addEventListener("click", async () => {
 
       setTimeout(() => {
         window.location.replace("./index.html");
-      }, 2000);
+      }, 1500);
     }
   } catch (err) {
     const deleteMessage = document.getElementById("messageInfo");

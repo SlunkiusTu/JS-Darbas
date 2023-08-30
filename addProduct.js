@@ -47,6 +47,10 @@ productButton.addEventListener("click", async () => {
     if (data) {
       const messageWrapper = document.getElementById("message");
       messageWrapper.innerHTML = "Productas idetas";
+
+      setTimeout(() => {
+        window.location.replace("./index.html");
+      }, 1500);
       clearInput();
     }
   } catch (err) {

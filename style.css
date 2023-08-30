@@ -64,7 +64,7 @@ nav ul li a:hover {
 .product-index {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  max-width: 60%;
   margin: auto;
   gap: 1rem;
   margin-top: 100px;
@@ -72,6 +72,10 @@ nav ul li a:hover {
 
 .product-index input {
   padding: 0.5rem;
+}
+
+.product-index textarea {
+  height: 100px;
 }
 
 .index-button {
@@ -87,9 +91,56 @@ nav ul li a:hover {
   color: black;
 }
 
+input,
+textarea,
+button {
+  display: block;
+}
+
 /* Prekes page CSS */
 
 .product-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.description {
+  max-width: 60%;
+  text-align: center;
+}
+
+.price {
+  color: #d40000;
+  font-size: 28px;
+}
+
+.location {
+  font-size: 20px;
+}
+
+.deleteButton {
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 0, 0, 0.377);
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.deleteButton:hover {
+  background-color: #d40000;
+  color: white;
 }
