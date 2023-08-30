@@ -13,7 +13,7 @@ const getProducts = async () => {
     container.href = "./productPage.html";
 
     const image = document.createElement("img");
-    image.setAttribute("class", "product-image");
+    image.setAttribute("src", product.img_url);
     image.src = product.img_url;
     container.appendChild(image);
 

@@ -12,7 +12,7 @@ productButton.addEventListener("click", async () => {
   const products = {
     title: productTitle,
     price: productPrice,
-    url_img: productImage,
+    img_url: productImage,
     description: productDescription,
     location: productLocation,
   };
