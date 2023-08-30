@@ -7,7 +7,9 @@ const getProduct = async () => {
   const data = await response.json();
   console.log("data", data);
 
-  data.forEach((product) => {
+  const priceSort = data.sort((a, b) => a.price - b.price);
+
+  priceSort.forEach((product) => {
     const container = document.createElement("a");
     container.setAttribute("class", "products-container");
     container.href = "./productPage.html";
@@ -21,13 +23,13 @@ const getProduct = async () => {
     image.src = product.img_url;
     container.appendChild(image);
 
-    const title = document.createElement("h1");
+    const price = document.createElement("p");
+    price.innerHTML = `€${product.price}`;
+    container.appendChild(price);
+
+    const title = document.createElement("h4");
     title.innerHTML = product.title;
     container.appendChild(title);
-
-    const price = document.createElement("p");
-    price.innerHTML = product.price;
-    container.appendChild(price);
 
     productWrapper.append(container);
   });

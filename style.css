@@ -33,16 +33,30 @@ nav ul li a:hover {
 
 .product-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+
   gap: 0.2rem;
   margin-top: 1rem;
 }
 
 .products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 1px solid black;
   text-decoration: none;
   color: black;
   padding: 0.5rem;
+}
+
+.products-container img {
+  width: 100px;
+  height: 100px;
+}
+
+.products-container p {
+  font-size: 18px;
+  color: #d40000;
 }
 
 /* Ideti preke CSS */
@@ -71,4 +85,11 @@ nav ul li a:hover {
 .index-button:hover {
   background-color: rgb(90, 69, 69);
   color: black;
+}
+
+/* Prekes page CSS */
+
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

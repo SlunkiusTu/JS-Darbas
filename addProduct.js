@@ -9,6 +9,19 @@ productButton.addEventListener("click", async () => {
   ).value;
   const productLocation = document.getElementById("product-location").value;
 
+  if (
+    !productTitle ||
+    isNaN(productPrice) ||
+    productPrice <= 0 ||
+    !productImage ||
+    !productDescription ||
+    !productLocation
+  ) {
+    const messageWrapper = document.getElementById("message");
+    messageWrapper.innerHTML = "neuzpildyti visi laukeliai";
+    return;
+  }
+
   const products = {
     title: productTitle,
     price: productPrice,
@@ -34,9 +47,18 @@ productButton.addEventListener("click", async () => {
     if (data) {
       const messageWrapper = document.getElementById("message");
       messageWrapper.innerHTML = "Productas idetas";
+      clearInput();
     }
   } catch (err) {
     const messageWrapper = document.getElementById("message");
     messageWrapper.innerHTML = "Nepavyko ideti producto";
   }
 });
+
+const clearInput = () => {
+  document.getElementById("product-title").value = "";
+  document.getElementById("product-price").value = "";
+  document.getElementById("product-image").value = "";
+  document.getElementById("product-description").value = "";
+  document.getElementById("product-location").value = "";
+};
