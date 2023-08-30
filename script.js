@@ -1,6 +1,6 @@
 const productWrapper = document.getElementById("product");
 
-const getProducts = async () => {
+const getProduct = async () => {
   const response = await fetch(
     "https://64ed83091f87218271415468.mockapi.io/product"
   );
@@ -11,6 +11,10 @@ const getProducts = async () => {
     const container = document.createElement("a");
     container.setAttribute("class", "products-container");
     container.href = "./productPage.html";
+
+    container.addEventListener("click", () => {
+      localStorage.setItem("productId", product.id);
+    });
 
     const image = document.createElement("img");
     image.setAttribute("src", product.img_url);
@@ -28,4 +32,4 @@ const getProducts = async () => {
     productWrapper.append(container);
   });
 };
-getProducts();
+getProduct();

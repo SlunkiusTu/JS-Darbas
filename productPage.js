@@ -15,14 +15,18 @@ const productsAddedToPage = (product) => {
   description.innerHTML = product.description;
 
   const productPageImage = document.getElementById("productPageImage");
-  productPageImage.src = product.productPageImage;
+  productPageImage.src = product.img_url;
 };
 
 const getProduct = async () => {
+  console.log(productId);
+
   const response = await fetch(
     "https://64ed83091f87218271415468.mockapi.io/product/" + productId
   );
   const product = await response.json();
+  console.log(product);
+  console.log(response);
 
   productsAddedToPage(product);
 };
